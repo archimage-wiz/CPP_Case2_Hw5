@@ -32,12 +32,6 @@ public:
     Triangle() : Figure(3) {
         x_name = "Треугольник";
      }
-    int get_sides_count() override {
-        return Figure::get_sides_count();
-    }
-    virtual std::string get_name() override {
-        return x_name;
-    }
 };
 
 class Quadrangle : public Figure {
@@ -45,12 +39,6 @@ class Quadrangle : public Figure {
 public:
     Quadrangle() : Figure(4) { 
         x_name = "Четырехугольник";
-    }
-    int get_sides_count() override {
-        return Figure::get_sides_count();
-    }
-    virtual std::string get_name() override {
-        return x_name;
     }
 };
 

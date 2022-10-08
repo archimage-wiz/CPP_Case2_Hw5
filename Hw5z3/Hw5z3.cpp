@@ -43,17 +43,11 @@ public:
     Triangle(int a, int b, int c, int A, int B, int C) : _a(a), _b(b), _c(c), _A(A), _B(B), _C(C), Figure(3) {
         x_name = "Треугольник";
      }
-    int get_sides_count() override {
-        return Figure::get_sides_count();
-    }
-    virtual std::string get_name() override {
-        return x_name;
-    }
     virtual bool check() { 
         //std::cout << "вызван чек у треугольника" << std::endl;
         return (get_sides_count() == 3 && (_A + _B + _C) == 180) ? true : false;
     }
-    virtual void print_info(Figure * p_base) {
+    virtual void print_info(Figure * p_base) override {
         Figure::print_info(p_base);
         std::cout << "Стороны:";
         std::cout << " a=" << _a << " b=" << _b << " c=" << _c << std::endl;
@@ -111,16 +105,10 @@ public:
     Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) : _a(a), _b(b), _c(c), _d(d), _A(A), _B(B), _C(C), _D(D), Figure(4) { 
         x_name = "Четырехугольник";
     }
-    int get_sides_count() override {
-        return Figure::get_sides_count();
-    }
-    virtual std::string get_name() override {
-        return x_name;
-    }
     virtual bool check() { 
         return (get_sides_count() == 4 && (_A + _B + _C + _D) == 360) ? true : false;
     }
-    virtual void print_info(Figure * p_base) {
+    virtual void print_info(Figure * p_base) override {
         Figure::print_info(p_base);
         std::cout << "Стороны:";
         std::cout << " a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << std::endl;

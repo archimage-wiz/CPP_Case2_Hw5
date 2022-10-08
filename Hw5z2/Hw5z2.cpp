@@ -36,14 +36,7 @@ public:
     Triangle(int a, int b, int c, int A, int B, int C) : _a(a), _b(b), _c(c), _A(A), _B(B), _C(C), Figure(3) {
         x_name = "Треугольник";
      }
-    int get_sides_count() override {
-        return Figure::get_sides_count();
-    }
-    virtual std::string get_name() override {
-        return x_name;
-    }
-    
-    virtual void print_info() {
+    virtual void print_info() override {
         std::cout << x_name << std::endl;
         std::cout << "Стороны:";
         std::cout << " a=" << _a << " b=" << _b << " c=" << _c << std::endl;
@@ -80,13 +73,7 @@ public:
     Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D) : _a(a), _b(b), _c(c), _d(d), _A(A), _B(B), _C(C), _D(D), Figure(4) { 
         x_name = "Четырехугольник";
     }
-    int get_sides_count() override {
-        return Figure::get_sides_count();
-    }
-    virtual std::string get_name() override {
-        return x_name;
-    }
-    virtual void print_info() {
+    virtual void print_info() override {
         std::cout << x_name << std::endl;
         std::cout << "Стороны:";
         std::cout << " a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << std::endl;
